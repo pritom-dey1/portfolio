@@ -21,31 +21,33 @@ const itemVariants = {
 const About = () => {
   return (
     <div id="about">
-        <motion.div
-      
-      className="max-w-6xl py-10 mx-auto text-white"
-      variants={containerVariants}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-    >
-      <motion.h2
-        className="text-5xl text-center uppercase my-10 font-bold text-blue-300"
-        variants={itemVariants}
+      <motion.div
+        className="max-w-6xl py-10 mx-auto text-white"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
       >
-        About Me
-      </motion.h2>
+        <motion.h2
+          className="text-4xl sm:text-5xl text-center uppercase my-10 font-bold text-blue-300"
+          variants={itemVariants}
+        >
+          About Me
+        </motion.h2>
 
-      <motion.div className="flex gap-10" variants={containerVariants}>
-        <motion.div variants={itemVariants}>
-          <ProfileCard />
-        </motion.div>
+        <motion.div 
+          className="flex flex-col md:flex-row gap-10 items-center md:items-start"
+          variants={containerVariants}
+        >
+          <motion.div className="md:w-1/3 w-full flex justify-center" variants={itemVariants}>
+            <ProfileCard />
+          </motion.div>
 
-        <motion.div  variants={itemVariants}>
-          <AboutContent />
+          <motion.div className="md:w-2/3 w-full text-left pl-10 md:text-left md:pl-0" variants={itemVariants}>
+            <AboutContent />
+          </motion.div>
         </motion.div>
       </motion.div>
-    </motion.div>
     </div>
   );
 };

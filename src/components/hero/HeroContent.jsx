@@ -4,9 +4,9 @@ import { Typewriter } from 'react-simple-typewriter'
 const HeroContent = () => {
   return (
     <div className='text-white absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full'>
-      <p className='text-center text-2xl text-blue-500'>HI I'M PRITOM</p>
+  <p className='text-center text-xl sm:text-2xl text-blue-500'>HI I'M PRITOM</p>
 
-      <h1 className='text-center uppercase text-[50px] font-bold'>
+      <h1 className='text-center uppercase text-3xl sm:text-5xl font-bold mt-2'>
         <Typewriter
           words={[
             "Full-Stack Web Developer",
@@ -23,36 +23,20 @@ const HeroContent = () => {
         />
       </h1>
 
-      <p className='uppercase text-center'>
-        Full-Stack Web Developer crafting modern, high-performance, and user-focused <br />
+      <p className='uppercase text-center mt-2 text-sm sm:text-base'>
+        Full-Stack Web Developer crafting modern, high-performance, and user-focused <br className='hidden sm:block'/>
         web applications with clean code and creative problem-solving.
       </p>
 
-<button
-  className="
-    block 
-    mt-2
-    mx-auto 
-
-    px-8 py-2 
-    rounded-xl 
-    font-semibold 
-    text-white 
-    bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700
-    shadow-lg 
-    hover:shadow-blue-400/50
-    hover:scale-105 
-    transition-all 
-    duration-300 
-    border border-white/10 
-    backdrop-blur-md
-  "
->
-
-
-  <span>Let's Connect</span>
-</button>
-    <div className='max-w-6xl   mx-auto'>
+      <button
+        className="block mt-4 mx-auto px-8 py-2 rounded-xl font-semibold text-white 
+                   bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 shadow-lg 
+                   hover:shadow-blue-400/50 hover:scale-105 transition-all duration-300 
+                   border border-white/10 backdrop-blur-md"
+      >
+        <span>Let's Connect</span>
+      </button>
+    <div className='max-w-6xl   mx-auto hidden sm:block'>
         <div  className='absolute top-[-60%] left-[20%] html'>
   <svg width="60px" height="60px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
     <title>file_type_html</title>

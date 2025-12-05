@@ -4,7 +4,7 @@ import Matter from 'matter-js';
 const FallingText = ({
   text = '',
   highlightWords = [],
-  trigger = 'auto',
+  trigger = 'click',
   backgroundColor = 'transparent',
   wireframes = false,
   gravity = 1,
@@ -167,7 +167,7 @@ const FallingText = ({
   return (
     <div
       ref={containerRef}
-      className="relative z-[1] text-white w-full h-screen cursor-pointer text-center pt-8 overflow-hidden"
+      className="relative z-[1] text-white w-screen min-h-[90vh] cursor-pointer text-center pt-8 overflow-hidden"
       onClick={trigger === 'click' ? handleTrigger : undefined}
       onMouseEnter={trigger === 'hover' ? handleTrigger : undefined}
     >
